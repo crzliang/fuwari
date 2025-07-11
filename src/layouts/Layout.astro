@@ -2,6 +2,8 @@
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import 'overlayscrollbars/overlayscrollbars.css';
+import "photoswipe/style.css"
 
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import { profileConfig, siteConfig } from "@/config";
@@ -195,7 +197,7 @@ const bannerOffset =
 </style>
 
 <script>
-import 'overlayscrollbars/overlayscrollbars.css';
+
 import {
 	OverlayScrollbars,
 	// ScrollbarsHidingPlugin,
@@ -506,7 +508,7 @@ window.onresize = () => {
 
 <script>
 import PhotoSwipeLightbox from "photoswipe/lightbox"
-import "photoswipe/style.css"
+
 
 let lightbox: PhotoSwipeLightbox
 let pswp = import("photoswipe")
