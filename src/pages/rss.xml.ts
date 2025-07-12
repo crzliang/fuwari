@@ -1,5 +1,7 @@
 import rss from "@astrojs/rss";
 import { getSortedPosts } from "@utils/content-utils";
+import { getPostUrl } from "@utils/url-utils";
+import { type PermalinkData } from "@utils/permalink-utils";
 import type { APIContext } from "astro";
 import MarkdownIt from "markdown-it";
 import sanitizeHtml from "sanitize-html";
@@ -26,11 +28,21 @@ export async function GET(context: APIContext) {
 			const content =
 				typeof post.body === "string" ? post.body : String(post.body || "");
 			const cleanedContent = stripInvalidXmlChars(content);
+			
+			// Generate permalink using the permalink system
+			const permalinkData: PermalinkData = {
+				slug: post.slug,
+				title: post.data.title,
+				published: post.data.published,
+				category: post.data.category,
+				permalink: post.data.permalink,
+			};
+			
 			return {
 				title: post.data.title,
 				pubDate: post.data.published,
 				description: post.data.description || "",
-				link: `/posts/${post.slug}/`,
+				link: getPostUrl(permalinkData),
 				content: sanitizeHtml(parser.render(cleanedContent), {
 					allowedTags: sanitizeHtml.defaults.allowedTags.concat(["img"]),
 				}),
