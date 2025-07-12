@@ -1,15 +1,39 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { getPostUrlBySlug } from "@utils/url-utils";
+import { getPostUrl } from "@utils/url-utils";
+import { type PermalinkData } from "@utils/permalink-utils";
 import PostCard from "./PostCard.astro";
 
 const { page } = Astro.props;
 
 let delay = 0;
 const interval = 50;
+
+// Pre-process the data to avoid complex logic in JSX
+const processedEntries = page.data.map((entry: CollectionEntry<"posts">) => {
+    const permalinkData: PermalinkData = {
+        slug: entry.slug,
+        title: entry.data.title,
+        published: entry.data.published,
+        category: entry.data.category,
+        permalink: entry.data.permalink,
+    };
+    
+    return {
+        entry,
+        url: getPostUrl(permalinkData),
+        style: `animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`
+    };
+});
+
+type ProcessedEntry = {
+    entry: CollectionEntry<"posts">;
+    url: string;
+    style: string;
+};
 ---
 <div class="transition flex flex-col rounded-[var(--radius-large)] bg-[var(--card-bg)] py-1 md:py-0 md:bg-transparent md:gap-4 mb-4">
-    {page.data.map((entry: CollectionEntry<"posts">) => (
+    {(processedEntries as ProcessedEntry[]).map(({ entry, url, style }) => (
         <PostCard
                 entry={entry}
                 title={entry.data.title}
@@ -17,12 +41,12 @@ const interval = 50;
                 category={entry.data.category}
                 published={entry.data.published}
                 updated={entry.data.updated}
-                url={getPostUrlBySlug(entry.slug)}
+                url={url}
                 image={entry.data.image}
                 description={entry.data.description}
                 draft={entry.data.draft}
                 class:list="onload-animation"
-                style={`animation-delay: calc(var(--content-delay) + ${delay++ * interval}ms);`}
+                style={style}
         ></PostCard>
     ))}
 </div>
