@@ -4,7 +4,8 @@ import path from "node:path";
 import { Icon } from "astro-icon/components";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
-import { getDir } from "../utils/url-utils";
+import { getDir, getPostUrl } from "../utils/url-utils";
+import { type PermalinkData } from "../utils/permalink-utils";
 import ImageWrapper from "./misc/ImageWrapper.astro";
 import PostMetadata from "./PostMeta.astro";
 
@@ -12,7 +13,7 @@ interface Props {
 	class?: string;
 	entry: CollectionEntry<"posts">;
 	title: string;
-	url: string;
+	url?: string; // Make optional since we'll generate it
 	published: Date;
 	updated?: Date;
 	tags: string[];
@@ -25,7 +26,7 @@ interface Props {
 const {
 	entry,
 	title,
-	url,
+	url: providedUrl,
 	published,
 	updated,
 	tags,
@@ -35,6 +36,16 @@ const {
 	style,
 } = Astro.props;
 const className = Astro.props.class;
+
+// Generate URL using permalink system
+const permalinkData: PermalinkData = {
+	slug: entry.slug,
+	title: entry.data.title,
+	published: entry.data.published,
+	category: entry.data.category,
+	permalink: entry.data.permalink,
+};
+const url = providedUrl || getPostUrl(permalinkData);
 
 const hasCover = image !== undefined && image !== null && image !== "";
 
