@@ -37,6 +37,16 @@ export const siteConfig: SiteConfig = {
 		//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
 		// }
 	],
+	// Permalink configuration
+	permalink: {
+		pattern: "/posts/:slug/", // Default pattern: /posts/slug-name/
+		// Available variables: :year, :month, :day, :slug, :title, :category
+		// Examples:
+		// "/posts/:slug/" - /posts/my-article/
+		// "/:year/:month/:slug/" - /2023/10/my-article/
+		// "/:category/:slug/" - /tech/my-article/
+		// "/:year/:month/:day/:slug/" - /2023/10/01/my-article/
+	},
 };
 
 export const navBarConfig: NavBarConfig = {
@@ -53,7 +63,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	avatar: "assets/images/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Crzliang",
 	bio: "只要开始追赶，就已经在胜利的路上",
 	links: [
