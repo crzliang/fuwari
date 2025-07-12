@@ -1,5 +1,6 @@
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
+import { generatePermalink, type PermalinkData } from "./permalink-utils";
 
 export function pathsEqual(path1: string, path2: string) {
 	const normalizedPath1 = path1.replace(/^\/|\/$/g, "").toLowerCase();
@@ -14,6 +15,14 @@ function joinUrl(...parts: string[]): string {
 
 export function getPostUrlBySlug(slug: string): string {
 	return url(`/posts/${slug}/`);
+}
+
+/**
+ * Generate post URL using permalink system
+ */
+export function getPostUrl(data: PermalinkData): string {
+	const permalink = generatePermalink(data);
+	return url(permalink);
 }
 
 export function getTagUrl(tag: string): string {
