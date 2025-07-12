@@ -26,6 +26,11 @@ export type SiteConfig = {
 	};
 
 	favicon: Favicon[];
+	
+	// Permalink configuration
+	permalink?: {
+		pattern: string; // e.g., "/:year/:month/:title/" or "/posts/:slug/"
+	};
 };
 
 export type Favicon = {
