@@ -2,8 +2,8 @@
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import 'overlayscrollbars/overlayscrollbars.css';
-import "photoswipe/style.css"
+import "overlayscrollbars/overlayscrollbars.css";
+import "photoswipe/style.css";
 
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import { profileConfig, siteConfig } from "@/config";
@@ -112,6 +112,8 @@ const bannerOffset =
 		))}
 
 		<!-- Set the theme before the page is rendered to avoid a flash -->
+		<!-- 自建umani统计 -->
+		<script defer src="https://tongji.crzliang.cn/script.js" data-website-id="a2fc5732-e8c8-4ae1-9805-e88c618eee30"></script>
 		<script is:inline define:vars={{DEFAULT_THEME, LIGHT_MODE, DARK_MODE, AUTO_MODE, BANNER_HEIGHT_EXTEND, PAGE_WIDTH, configHue}}>
 			// Load the theme from local storage
 			const theme = localStorage.getItem('theme') || DEFAULT_THEME;
