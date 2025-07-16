@@ -5,6 +5,7 @@ tags:
   - wowchemy
   - 学术网站
   - hugo
+categories: 开发
 permalink: /archives/52454/
 published: 2024-05-29 23:15:29
 ---

@@ -2,10 +2,10 @@
 title: vscode网页版搭建
 tags: 
   - vscode
+categories: vscode
 permalink: /archives/28937/
 published: 2023-07-31 13:40:48
 ---
-
 # 前言
 
 > 在了解Vscode的隧道技术的时候就看到了一篇名为：《上课摸鱼必备 -- Vscode网页版的搭建教程》的文章，然后发现这个还挺好玩的，而且手上有一台云服务器就搭起来试试
@@ -55,8 +55,8 @@ cd /code-server/bin
 
 ## 配置文件
 
-- 然后ctrl+c暂停服务，进到`~/.config/code-server/`目录打开`config.yaml`
-- 把`bind-addr`改为0.0.0.0，这样才能使得外部网络进行访问
+- 然后ctrl+c暂停服务，进到 `~/.config/code-server/`目录打开 `config.yaml`
+- 把 `bind-addr`改为0.0.0.0，这样才能使得外部网络进行访问
 - `password`密码可以改也可以用默认的
 
 ![image-20230731140723613](./images/image-20230731140723613.png)
@@ -71,14 +71,12 @@ cd /code-server/bin
 nohup ./code-server &
 ```
 
-
-
 ![image-20230802160145092](./images/image-20230802160145092.png)
 
 ## 停止
 
 要关闭运行的程序
 
-先查看`code-server`的pid。然后使用kill命令进行停止即可
+先查看 `code-server`的pid。然后使用kill命令进行停止即可
 
 ![image-20230802160707317](./images/image-20230802160707317.png)

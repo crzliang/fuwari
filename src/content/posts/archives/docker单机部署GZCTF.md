@@ -6,12 +6,11 @@ tags:
   - 运维
   - docker
   - GZCTF
+categories: 运维
 ---
 # 前言
 
 > 这篇文章已经有一年多的时间了，不建议按照这篇文章进行部署，请大家移步：[官方文档](https://gzctf.gzti.me/)
-
-
 
 > 最早接触的自建CTF平台就是CTFd，然后在GitHub上面又发现了[**GZTime**](https://gztime.cc/)大佬开发的[GZCTF](https://github.com/GZTimeWalker/GZCTF)平台，然后就尝试着部署了，因为是全新的架构，部署的时候遇到了问题也在群里得到了解决，现在又想着在内网重新搭建一遍，发现有些细节的地方有点忘了，所以就想着写下这篇文章记录一下，也方便后续自己可能在其他地方进行部署的时候能比较快的完成部署。
 

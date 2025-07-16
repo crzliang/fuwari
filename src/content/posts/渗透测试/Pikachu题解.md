@@ -3,19 +3,19 @@ title: Pikachu题解
 tags: 
   - pikachu
   - 渗透测试
+categories: 靶场&靶机
 permalink: /archives/5168/
 published: 2022-05-21 14:54:28
 ---
-
 # Burte Force（暴力破解）
 
-##  概述  
+## 概述
 
-> “暴力破解”是一攻击具手段，在web攻击中，一般会使用这种手段对应用系统的认证信息进行获取。 其过程就是使用大量的认证信息在认证接口进行尝试登录，直到得到正确的结果。 为了提高效率，暴力破解一般会使用带有字典的工具来进行自动化操作。 
+> “暴力破解”是一攻击具手段，在web攻击中，一般会使用这种手段对应用系统的认证信息进行获取。 其过程就是使用大量的认证信息在认证接口进行尝试登录，直到得到正确的结果。 为了提高效率，暴力破解一般会使用带有字典的工具来进行自动化操作。
 >
 > 理论上来说，大多数系统都是可以被暴力破解的，只要攻击者有足够强大的计算能力和时间，所以断定一个系统是否存在暴力破解漏洞，其条件也不是绝对的。 我们说一个web应用系统存在暴力破解漏洞，一般是指该web应用系统没有采用或者采用了比较弱的认证安全策略，导致其被暴力破解的“可能性”变的比较高。 这里的认证安全策略, 包括：
 >
->  1.是否要求用户设置复杂的密码；
+> 1.是否要求用户设置复杂的密码；
 > 2.是否每次认证都使用安全的验证码（想想你买火车票时输的验证码～）或者手机otp；
 > 3.是否对尝试登录的行为进行判断和限制（如：连续5次错误登录，进行账号锁定或IP地址锁定等）；
 > 4.是否采用了双因素认证；
@@ -23,8 +23,6 @@ published: 2022-05-21 14:54:28
 > 千万不要小看暴力破解漏洞,往往这种简单粗暴的攻击方式带来的效果是超出预期的!
 >
 > 你可以通过“BurteForce”对应的测试栏目，来进一步的了解该漏洞。
->
-> 
 >
 > **从来没有哪个时代的黑客像今天一样热衷于猜解密码 ---奥斯特洛夫斯基**
 
@@ -43,7 +41,6 @@ published: 2022-05-21 14:54:28
 ![img](./images/1651757502578-1bea8f73-cbb1-4937-b808-34d54a365336.png)
 
 - 把攻击模式从sniper改成cluster bomb模式
-
 - 然后在payloads里导入字典
 
 ![img](./images/1651757898590-6ca9efd1-d28a-432a-98de-e6de0ee8ae98.png)
@@ -55,7 +52,6 @@ published: 2022-05-21 14:54:28
 ![img](./images/1651757943096-af3ff326-f2b2-4f6f-b2ae-84064d7b0c8e.png)
 
 - 因为多了一个验证码肯定是不能按照上一题的方法直接开搞的，
-
 - 看了一眼tips知道可以直接无视验证码直接开始爆破，那接下来的步骤和**基于表单的暴力破解**的一样
 
 ![img](./images/1651759754439-29354125-4406-44bd-b8ca-d5bf4b591fef.png)
@@ -97,15 +93,12 @@ published: 2022-05-21 14:54:28
 ![img](./images/1651824125951-925da005-8d63-40d1-b5f6-9ec677b623fe.png)
 
 - 然而并不行，那就要想办法绕过token验证，看其他大佬的博客来操作
-
 - 首先抓包放到爆破模块里按照前面的步骤操作
-
 - 攻击的类型选择Pitchfork
 
 ![img](./images/1653111921990-5b88280b-abcc-4a14-9d19-00fead6678ec.png)
 
 - 然后针对token要进行一些其他的处理
-
 - 在Options中找到Grep-Extract把打上勾然后点击Add
 
 ![img](./images/1653108514767-6d2374fc-8827-47ae-9155-430b4e8b1710.png)
@@ -131,9 +124,9 @@ published: 2022-05-21 14:54:28
 ## 概述
 
 > Cross-Site Scripting 简称为“CSS”，为避免与前端叠成样式表的缩写"CSS"冲突，故又称XSS。一般XSS可以分为如下几种常见类型：
-> 										1.反射性XSS;
-> 										2.存储型XSS;
-> 										3.DOM型XSS;
+> 1.反射性XSS;
+> 2.存储型XSS;
+> 3.DOM型XSS;
 >
 > XSS漏洞一直被评估为web漏洞中危害较大的漏洞，在OWASP TOP10的排名中一直属于前三的江湖地位。
 > XSS是一种发生在前端浏览器端的漏洞，所以其危害的对象也是前端用户。
@@ -142,8 +135,7 @@ published: 2022-05-21 14:54:28
 > 输入过滤：对输入进行过滤，不允许可能导致XSS攻击的字符输入;
 > 输出转义：根据输出点的位置对输出到前端的内容进行适当转义;
 >
->
-> 你可以通过“Cross-Site Scripting”对应的测试栏目，来进一步的了解该漏洞。 
+> 你可以通过“Cross-Site Scripting”对应的测试栏目，来进一步的了解该漏洞。
 
 ## 反射型xss（get）
 
@@ -194,19 +186,19 @@ published: 2022-05-21 14:54:28
 ```js
 <script>
 
-​                    function domxss(){
+                    function domxss(){
 
-​                        var str = document.getElementById("text").value;
+                        var str = document.getElementById("text").value;
 
-​                        document.getElementById("dom").innerHTML = "<a href='"+str+"'>what do you see?</a>";
+                        document.getElementById("dom").innerHTML = "<a href='"+str+"'>what do you see?</a>";
 
-​                    }
+                    }
 
-​                    //试试：'><img src="G:\MyBlog\blog\source\_posts\%23" onmouseover="alert('xss')">
+                    //试试：'><img src="G:\MyBlog\blog\source\_posts\%23" onmouseover="alert('xss')">
 
-​                    //试试：' onclick="alert('xss')">,闭合掉就行
+                    //试试：' onclick="alert('xss')">,闭合掉就行
 
-​                </script>
+                </script>
 ```
 
 这一段JS，是告诉我们用户输入的字符串会被存到str然后拼接，
@@ -218,9 +210,7 @@ published: 2022-05-21 14:54:28
 ## DOM型xss-x
 
 - 这题乍一看和上一题很像
-
 - 随便输入一个字符串然后提交后发现url变了
-
 - 再点击连接，发现url又变了
 
 ![img](./images/1653115375628-9a02993f-fe16-4ccf-9031-f376c39f773f.png)
@@ -231,27 +221,27 @@ published: 2022-05-21 14:54:28
 
 ```js
 <script>
-​                    function domxss(){
+                    function domxss(){
 
-​                        var str = window.location.search;
+                        var str = window.location.search;
 
-​                        var txss = decodeURIComponent(str.split("text=")[1]);
+                        var txss = decodeURIComponent(str.split("text=")[1]);
 
-​                        var xss = txss.replace(/\+/g,' ');
+                        var xss = txss.replace(/\+/g,' ');
 
 //                        alert(xss);
 
 
 
-​                        document.getElementById("dom").innerHTML = "<a href='"+xss+"'>就让往事都随风,都随风吧</a>";
+                        document.getElementById("dom").innerHTML = "<a href='"+xss+"'>就让往事都随风,都随风吧</a>";
 
-​                    }
+                    }
 
-​                    //试试：'><img src="G:\MyBlog\blog\source\_posts\%23" onmouseover="alert('xss')">
+                    //试试：'><img src="G:\MyBlog\blog\source\_posts\%23" onmouseover="alert('xss')">
 
-​                    //试试：' onclick="alert('xss')">,闭合掉就行
+                    //试试：' onclick="alert('xss')">,闭合掉就行
 
-​                </script>
+                </script>
 ```
 
 - 直接构造payload：' onclick="alert('xss')">

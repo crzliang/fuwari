@@ -4,10 +4,10 @@ tags:
   - 前端
   - 运维
   - 开发
+categories: 开发
 permalink: /archives/61429/
 published: 2022-08-18 09:51:32
 ---
-
 # 平台前端页面框架
 
 > 2022-8-18第一版
@@ -170,31 +170,31 @@ published: 2022-08-18 09:51:32
           <h1>组名</h1>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
@@ -205,61 +205,61 @@ published: 2022-08-18 09:51:32
           <h1>组名</h1>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="col-lg-12">&nbsp;</div> <img src="" alt="头像" width="110" class="round_icon img-circle"
+          <div class="col-lg-12"> </div> <img src="" alt="头像" width="110" class="round_icon img-circle"
             style="float:left" />
           <h2 style="text-indent: 1em; font-weight: bold;">ID</h2>
           <p style="text-indent: 2em; font-size:medium;">介绍</p>
-          <div class="col-lg-12">&nbsp;</div>
+          <div class="col-lg-12"> </div>
           <div class="col-col-lg-4">
             <a href="" target="_blank" class="btn">Blog</a>
           </div>
@@ -278,7 +278,6 @@ published: 2022-08-18 09:51:32
 
 - 文件位置
   `/root/CTFd/CTFd/themes/core/templates/base.html`
-
 - 源码：
 
 ![image-20221129134704361](./images/image-20221129134704361.png)
@@ -292,7 +291,6 @@ published: 2022-08-18 09:51:32
 - 文件位置
 
   `/root/CTFd/CTFd/themes/core/templates/components/navbar.html`
-
 - 源码：
 
 ```html
@@ -323,13 +321,11 @@ published: 2022-08-18 09:51:32
 - 文件位置
 
   `/root/CTFd/CTFd/plugins/ctfd-whale/assets/view.js`
-
 - 源码：
 
   ```js
   '<a target="_ blank" href="http://' + response.user_access +'"><p class="card- text">' + response.user_access +'</p>' + '</a>'+
   ```
-
 - 代码插入位置：
 
 ![image-20220927132344133](./images/image-20220927132344133.png)
@@ -337,4 +333,3 @@ published: 2022-08-18 09:51:32
 - 效果：
 
 ![image-20220927132432236](./images/image-20220927132432236.png)
-

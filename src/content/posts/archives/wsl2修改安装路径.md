@@ -2,10 +2,10 @@
 title: wsl2修改安装路径
 tags: 
   - wsl
+categories: wsl
 permalink: /archives/24001/
 published: 2023-04-01 22:19:51
 ---
-
 # 暂停wsl运行
 
 ```shell
@@ -53,4 +53,3 @@ wsl --import Ubuntu-22.04 D:\wsl-ubuntu D:\Ubuntu-22.04.tar
 ```
 
 `import后面是：导入系统的名称+安装的路径+打包好的系统镜像的路径`
-
