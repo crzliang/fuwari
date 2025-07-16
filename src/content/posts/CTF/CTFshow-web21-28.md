@@ -4,16 +4,15 @@ tags:
   - web
   - CTF
 permalink: /archives/42189/
-published: 2022/10/13 09:00:40
+published: 2022-10-13 09:00:40
 ---
-
-## web21 
+## web21
 
 - 题目：
 
 ![image-20221013094816541](./images/image-20221013094816541.png)
 
-- burp抓包利用Intruder模块进行爆破，在根据hint1里的提示知道这是一个tomcat认证爆破，所以标记Authorization: Basic 
+- burp抓包利用Intruder模块进行爆破，在根据hint1里的提示知道这是一个tomcat认证爆破，所以标记Authorization: Basic
 
 ![image-20221013094825370](./images/image-20221013094825370.png)
 
@@ -69,7 +68,7 @@ if(isset($_GET['token'])){
 ?>
 ```
 
--  分析源码编写php脚本：
+- 分析源码编写php脚本：
 
 ```php
 <?php
@@ -216,7 +215,6 @@ Linux version 5.4.0-126-generic (buildd@lcy02-amd64-072) (gcc version 9.4.0 (Ubu
 ![image-20221013144535082](./images/image-20221013144535082.png)
 
 - 正常的做题姿势
-
 - burp抓包后用Intruder模块进行爆破
 
 ![image-20221013153318406](./images/image-20221013153318406.png)
@@ -224,7 +222,6 @@ Linux version 5.4.0-126-generic (buildd@lcy02-amd64-072) (gcc version 9.4.0 (Ubu
 ## web27
 
 - 打开题目，得到一份录取名单，教务管理系统，学院录取查询系统
-
 - 得到身份证信息不清晰，那就抓包爆破
 
 ![image-20221013153948233](./images/image-20221013153948233.png)
