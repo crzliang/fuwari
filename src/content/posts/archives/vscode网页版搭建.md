@@ -17,7 +17,7 @@ published: 2023-07-31 13:40:48
 
 我的服务器是Ubuntu22.04的所以就选了code-server-4.16.0-linux-amd64.tar.gz这个版本
 
-![image-20230731134212307](https://img.crzliang.cn/img/image-20230731134212307.png)
+![image-20230731134212307](./images/image-20230731134212307.png)
 
 # 部署
 
@@ -59,7 +59,7 @@ cd /code-server/bin
 - 把`bind-addr`改为0.0.0.0，这样才能使得外部网络进行访问
 - `password`密码可以改也可以用默认的
 
-![image-20230731140723613](https://img.crzliang.cn/img/image-20230731140723613.png)
+![image-20230731140723613](./images/image-20230731140723613.png)
 
 # 后台运行
 
@@ -73,7 +73,7 @@ nohup ./code-server &
 
 
 
-![image-20230802160145092](https://img.crzliang.cn/img/image-20230802160145092.png)
+![image-20230802160145092](./images/image-20230802160145092.png)
 
 ## 停止
 
@@ -81,4 +81,4 @@ nohup ./code-server &
 
 先查看`code-server`的pid。然后使用kill命令进行停止即可
 
-![image-20230802160707317](https://img.crzliang.cn/img/image-20230802160707317.png)
+![image-20230802160707317](./images/image-20230802160707317.png)
