@@ -3,6 +3,7 @@ title: DC-3复现
 tags: 
   - vulnhub
   - 渗透测试
+category: 靶场&靶机
 permalink: /archives/4926/
 published: 2022-06-05 05:31:23
 ---

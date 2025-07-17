@@ -3,6 +3,7 @@ title: CTFShow-web-命令执行
 tags: 
   - web
   - CTF
+category: WriteUP
 permalink: /archives/41279/
 published: 2023-4-28 22:15:59
 ---

@@ -3,6 +3,7 @@ title: Hack the box Unified题解
 tags:
   - HTB
   - 渗透测试
+category: 靶场&靶机
 permalink: /archives/35769/
 published: 2023-04-03 11:32:28
 ---

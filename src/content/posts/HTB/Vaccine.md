@@ -3,6 +3,7 @@ title: Hack the box Vaccine题解
 tags: 
   - HTB
   - 渗透测试
+category: 靶场&靶机
 permalink: /archives/28632/
 published: 2023-04-02 12:10:06
 ---

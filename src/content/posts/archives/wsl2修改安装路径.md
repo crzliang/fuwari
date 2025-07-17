@@ -2,7 +2,7 @@
 title: wsl2修改安装路径
 tags: 
   - wsl
-categories: wsl
+category: wsl
 permalink: /archives/24001/
 published: 2023-04-01 22:19:51
 ---

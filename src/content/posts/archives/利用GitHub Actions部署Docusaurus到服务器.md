@@ -4,7 +4,7 @@ tags:
   - GitHub
   - GitHub actions
   - docusaurus
-categories: 运维
+category: 运维
 permalink: /archives/36330/
 published: 2024-08-19 17:00:21
 ---

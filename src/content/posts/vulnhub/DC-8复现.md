@@ -5,6 +5,7 @@ published: 2022-12-01 14:57:00
 tags: 
   - vulnhub
   - 渗透测试
+category: 靶场&靶机
 ---
 
 # DC-8复现

@@ -3,6 +3,7 @@ title: 记一次不知名比赛的WP
 tags:
   - 比赛
   - CTF
+category: WriteUP
 permalink: /archives/10397/
 published: 2023-06-24 01:28:52
 ---

@@ -3,7 +3,7 @@ title: Git命令笔记
 tags:
   - Git
   - 运维
-categories: 运维
+category: 运维
 permalink: /archives/42291/
 published: 2023-05-16 11:32:06
 ---

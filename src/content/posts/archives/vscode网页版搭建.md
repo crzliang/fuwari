@@ -2,7 +2,7 @@
 title: vscode网页版搭建
 tags: 
   - vscode
-categories: vscode
+category: vscode
 permalink: /archives/28937/
 published: 2023-07-31 13:40:48
 ---

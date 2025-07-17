@@ -3,6 +3,7 @@ title: Hack the box Oopsie题解
 tags: 
   - HTB
   - 渗透测试
+category: 靶场&靶机
 permalink: /archives/22239/
 published: 2023-03-23 13:56:39
 ---

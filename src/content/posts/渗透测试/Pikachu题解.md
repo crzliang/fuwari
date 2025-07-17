@@ -3,7 +3,7 @@ title: Pikachu题解
 tags: 
   - pikachu
   - 渗透测试
-categories: 靶场&靶机
+category: 靶场&靶机
 permalink: /archives/5168/
 published: 2022-05-21 14:54:28
 ---

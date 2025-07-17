@@ -3,6 +3,7 @@ title: BUUCTF-web刷题
 tags: 
   - web
   - CTF
+category: WriteUP
 permalink: /archives/44511/
 published: 2022-08-09 20:02:51
 ---

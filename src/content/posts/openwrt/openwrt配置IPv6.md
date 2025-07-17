@@ -3,6 +3,7 @@ title: openwrt配置IPv6
 tags:
   - openwrt
   - IPv6
+category: 软路由
 permalink: /archives/25815/
 published: 2025-03-04 17:41:33
 ---

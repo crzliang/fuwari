@@ -3,6 +3,7 @@ title: CTFshow-web21-28
 tags:
   - web
   - CTF
+category: WriteUP
 permalink: /archives/42189/
 published: 2022-10-13 09:00:40
 ---

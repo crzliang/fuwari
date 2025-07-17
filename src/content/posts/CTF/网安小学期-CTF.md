@@ -3,6 +3,7 @@ title: 22年网安小学期-CTF
 tags: 
   - 网安小学期
   - CTF
+category: WriteUP
 permalink: /archives/65465/
 published: 2022-07-09 16:43:47
 ---

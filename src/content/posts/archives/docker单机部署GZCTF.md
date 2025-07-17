@@ -6,7 +6,7 @@ tags:
   - 运维
   - docker
   - GZCTF
-categories: 运维
+category: 运维
 ---
 # 前言
 

@@ -4,7 +4,7 @@ tags:
   - 前端
   - 运维
   - 开发
-categories: 开发
+category: 开发
 permalink: /archives/61429/
 published: 2022-08-18 09:51:32
 ---

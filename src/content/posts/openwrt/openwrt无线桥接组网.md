@@ -3,6 +3,7 @@ title: openwrt无线桥接组网
 tags: 
   - 路由器组网
   - openwrt
+category: 软路由
 permalink: /archives/3407/
 published: 2022-06-19 21:46:17
 ---
