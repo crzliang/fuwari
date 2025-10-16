@@ -3,7 +3,7 @@ title: test
 tags:
   - test
 category: test
-permalink: /archives/51806/
+permalink: /archives/51807/
 published: 2025-09-29 12:00:00
 ---
 ## test
