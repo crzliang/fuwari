@@ -5,6 +5,7 @@ import type {
 	ProfileConfig,
 	SiteConfig,
 	CommentConfig,
+	LinksConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
@@ -55,6 +56,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		LinkPreset.About,
+		LinkPreset.Links,
 		// {
 		// 	name: "GitHub",
 		// 	url: "https://github.com/crzliang", // Internal links should not include the base path, as it is automatically added
@@ -128,4 +130,14 @@ export const commentConfig: CommentConfig = {
 	// 	lang: "zh-CN",
 	// 	loading: "lazy",
 	// },
+};
+
+export const linksConfig: LinksConfig = {
+	enable: true,
+	applyTip: {
+		name: "crzliang",
+		intro: "crzliang's Blog",
+		link: "https://blog.crzliang.cn/",
+		avatar: "https://blog.crzliang.cn/favicon.ico",
+	},
 };

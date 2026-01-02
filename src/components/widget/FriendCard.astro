@@ -1,0 +1,194 @@
+---
+export interface FriendLink {
+	name: string;
+	intro: string;
+	link: string;
+	avatar: string;
+}
+
+interface Props {
+	friend: FriendLink;
+}
+
+const { friend } = Astro.props;
+
+// 随机打乱数组的函数（将在页面中调用）
+---
+
+<a href={friend.link} target="_blank" rel="noopener noreferrer" class="friend-card group">
+	<div class="friend-card-content card-base">
+		<div class="friend-avatar-wrapper">
+			<img
+				src={friend.avatar}
+				alt={`${friend.name}'s avatar`}
+				class="friend-avatar"
+				loading="lazy"
+			/>
+			<div class="friend-avatar-overlay">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="32"
+					height="32"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke-width="2.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="arrow-icon"
+				>
+					<line x1="5" y1="12" x2="19" y2="12" class="arrow-line"></line>
+					<polyline points="12 5 19 12 12 19" class="arrow-head"></polyline>
+				</svg>
+			</div>
+		</div>
+		<div class="friend-info">
+			<p class="friend-name">{friend.name}</p>
+			<p class="friend-intro">{friend.intro}</p>
+		</div>
+		<img
+			src={friend.avatar}
+			alt="background"
+			class="friend-bg"
+			loading="lazy"
+			aria-hidden="true"
+		/>
+	</div>
+</a>
+
+<style>
+	.friend-card {
+		text-decoration: none;
+		display: block;
+	}
+
+	.friend-card-content {
+		position: relative;
+		height: 100%;
+		overflow: hidden;
+		border-radius: var(--radius-large);
+		padding: 0.75rem 1rem;
+		transition: background-color 0.3s ease;
+	}
+
+	@media (min-width: 640px) {
+		.friend-card-content {
+			padding: 1rem 1.5rem;
+		}
+	}
+
+	.friend-card-content:hover {
+		background-color: var(--btn-regular-bg-hover);
+	}
+
+	.friend-card-content {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		position: relative;
+		z-index: 10;
+	}
+
+	.friend-avatar-wrapper {
+		position: relative;
+		width: 3.5rem;
+		height: 3.5rem;
+		min-width: 3.5rem;
+		overflow: hidden;
+		border-radius: 9999px;
+	}
+
+	.friend-avatar {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		background-color: white;
+	}
+
+	.friend-avatar-overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
+		background-color: var(--color-text-base);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.group:hover .friend-avatar-overlay {
+		opacity: 0.5;
+	}
+
+	.arrow-icon {
+		stroke: var(--card-bg);
+		margin-right: 0.5rem;
+	}
+
+	.arrow-line {
+		transform: translateX(1rem) scaleX(0);
+		transition: all 0.3s ease;
+	}
+
+	.group:hover .arrow-line {
+		transform: translateX(0.25rem) scaleX(1);
+	}
+
+	.arrow-head {
+		transform: translateX(0);
+		transition: all 0.3s ease;
+	}
+
+	.group:hover .arrow-head {
+		transform: translateX(0.25rem);
+	}
+
+	.friend-info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		flex: 1;
+		min-width: 0;
+	}
+
+	.friend-name {
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		color: var(--color-text-base);
+	}
+
+	.friend-intro {
+		margin: 0;
+		font-size: 0.75rem;
+		line-height: 1rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		color: var(--color-text-muted);
+	}
+
+	.friend-bg {
+		position: absolute;
+		left: -0.5rem;
+		top: 0;
+		z-index: 0;
+		height: 100%;
+		width: 66.666667%;
+		background-color: white;
+		object-fit: cover;
+		opacity: 0.15;
+		mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+		-webkit-mask-image: -webkit-linear-gradient(
+			to left,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 1) 100%
+		);
+	}
+</style>

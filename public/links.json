@@ -1,0 +1,27 @@
+{
+  "friends": [
+    {
+      "name": "Common Links",
+      "description": "Common friend links",
+      "links": [
+        {
+          "name": "Astro",
+          "intro": "The web framework for content-driven websites",
+          "link": "https://astro.build/",
+          "avatar": "https://astro.build/favicon.svg"
+        },
+        {
+          "name": "Fuwari",
+          "intro": "A static blog template built with Astro",
+          "link": "https://github.com/saicaca/fuwari",
+          "avatar": "https://github.com/saicaca.png"
+        }
+      ]
+    },
+    {
+      "name": "Special Links",
+      "description": "Special friend links",
+      "links": []
+    }
+  ]
+}

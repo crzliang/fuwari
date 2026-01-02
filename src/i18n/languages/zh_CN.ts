@@ -6,6 +6,7 @@ export const zh_CN: Translation = {
 	[Key.about]: "关于",
 	[Key.archive]: "归档",
 	[Key.search]: "搜索",
+	[Key.links]: "友链",
 
 	[Key.tags]: "标签",
 	[Key.categories]: "分类",
@@ -35,4 +36,19 @@ export const zh_CN: Translation = {
 	[Key.author]: "作者",
 	[Key.publishedAt]: "发布于",
 	[Key.license]: "许可协议",
+
+	// Links page
+	[Key.linksDesc]: "这些友链会随机排序展示。",
+	[Key.noLinks]: "暂无友链",
+	[Key.applyLinks]: "申请友链",
+	[Key.siteInfo]: "本站信息（点击复制）：",
+	[Key.siteName]: "名称",
+	[Key.siteIntro]: "简介",
+	[Key.siteLink]: "链接",
+	[Key.siteAvatar]: "头像",
+	[Key.applyDesc]: "可通过下方留言申请友链。申请要求：",
+	[Key.applyRule1]: "推荐了本站",
+	[Key.applyRule2]: "站点活着且有正式域名",
+	[Key.applyRule3]: "至少五篇原创文章且最近一年更新过",
+	[Key.applyRule4]: "内容不违反国家法律",
 };

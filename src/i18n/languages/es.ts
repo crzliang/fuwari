@@ -6,6 +6,7 @@ export const es: Translation = {
 	[Key.about]: "Sobre mí",
 	[Key.archive]: "Archivo",
 	[Key.search]: "Buscar",
+	[Key.links]: "Enlaces",
 
 	[Key.tags]: "Etiquetas",
 	[Key.categories]: "Categorías",
@@ -35,4 +36,19 @@ export const es: Translation = {
 	[Key.author]: "Autor",
 	[Key.publishedAt]: "Publicado el",
 	[Key.license]: "Licencia",
+
+	// Links page
+	[Key.linksDesc]: "Estos enlaces se muestran en orden aleatorio.",
+	[Key.noLinks]: "No hay enlaces aquí",
+	[Key.applyLinks]: "Solicitar enlace",
+	[Key.siteInfo]: "Información del sitio (clic para copiar):",
+	[Key.siteName]: "Nombre",
+	[Key.siteIntro]: "Intro",
+	[Key.siteLink]: "Enlace",
+	[Key.siteAvatar]: "Avatar",
+	[Key.applyDesc]: "Solicita a través de comentarios. Requisitos:",
+	[Key.applyRule1]: "Recomiendas este sitio en tu web",
+	[Key.applyRule2]: "El sitio está activo con un dominio formal",
+	[Key.applyRule3]: "Al menos 5 artículos originales y actualizado recientemente",
+	[Key.applyRule4]: "El contenido no viola las leyes",
 };

@@ -6,6 +6,7 @@ export const zh_TW: Translation = {
 	[Key.about]: "關於",
 	[Key.archive]: "彙整",
 	[Key.search]: "搜尋",
+	[Key.links]: "友鏈",
 
 	[Key.tags]: "標籤",
 	[Key.categories]: "分類",
@@ -35,4 +36,19 @@ export const zh_TW: Translation = {
 	[Key.author]: "作者",
 	[Key.publishedAt]: "發佈於",
 	[Key.license]: "許可協議",
+
+	// Links page
+	[Key.linksDesc]: "這些友鏈會隨機排序展示。",
+	[Key.noLinks]: "暫無友鏈",
+	[Key.applyLinks]: "申請友鏈",
+	[Key.siteInfo]: "本站資訊（點擊複製）：",
+	[Key.siteName]: "名稱",
+	[Key.siteIntro]: "簡介",
+	[Key.siteLink]: "連結",
+	[Key.siteAvatar]: "頭像",
+	[Key.applyDesc]: "可透過下方留言申請友鏈。申請要求：",
+	[Key.applyRule1]: "推薦了本站",
+	[Key.applyRule2]: "站點活著且有正式域名",
+	[Key.applyRule3]: "至少五篇原創文章且最近一年更新過",
+	[Key.applyRule4]: "內容不違反國家法律",
 };

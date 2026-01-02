@@ -6,6 +6,7 @@ export const th: Translation = {
 	[Key.about]: "เกี่ยวกับ",
 	[Key.archive]: "คลัง",
 	[Key.search]: "ค้นหา",
+	[Key.links]: "ลิงก์",
 
 	[Key.tags]: "ป้ายกำกับ",
 	[Key.categories]: "หมวดหมู่",
@@ -35,4 +36,19 @@ export const th: Translation = {
 	[Key.author]: "ผู้เขียน",
 	[Key.publishedAt]: "เผยแพร่เมื่อ",
 	[Key.license]: "สัญญาอนุญาต",
+
+	// Links page
+	[Key.linksDesc]: "ลิงก์เหล่านี้แสดงในลำดับสุ่ม",
+	[Key.noLinks]: "ไม่มีลิงก์ที่นี่",
+	[Key.applyLinks]: "สมัครลิงก์",
+	[Key.siteInfo]: "ข้อมูลเว็บไซต์（คลิกเพื่อคัดลอก）：",
+	[Key.siteName]: "ชื่อ",
+	[Key.siteIntro]: "แนะนำ",
+	[Key.siteLink]: "ลิงก์",
+	[Key.siteAvatar]: "อวาตาร์",
+	[Key.applyDesc]: "สมัครผ่านความคิดเห็นด้านล่าง ข้อกำหนด：",
+	[Key.applyRule1]: "แนะนำเว็บไซต์นี้บนเว็บของคุณ",
+	[Key.applyRule2]: "เว็บไซต์มีชีวิตและมีโดเมนที่เป็นทางการ",
+	[Key.applyRule3]: "มีบทความต้นฉบับอย่างน้อย 5 บทความและอัปเดตเมื่อเร็วๆ นี้",
+	[Key.applyRule4]: "เนื้อหาไม่ละเมิดกฎหมาย",
 };

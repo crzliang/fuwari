@@ -43,6 +43,7 @@ export enum LinkPreset {
 	Home = 0,
 	Archive = 1,
 	About = 2,
+	Links = 3,
 }
 
 export type NavBarLink = {
@@ -123,4 +124,14 @@ export type CommentConfig = {
 	twikoo?: TwikooConfig;
 	disqus?: DisqusConfig;
 	giscus?: GiscusConfig;
+};
+
+export type LinksConfig = {
+	enable: boolean;
+	applyTip: {
+		name: string;
+		intro: string;
+		link: string;
+		avatar: string;
+	};
 };
