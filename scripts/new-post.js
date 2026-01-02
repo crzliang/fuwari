@@ -12,6 +12,14 @@ function getDate() {
   return `${year}-${month}-${day}`
 }
 
+// Generate a unique permalink ID based on timestamp
+function generatePermalinkId() {
+  const timestamp = Date.now()
+  // Generate a 5-digit number from timestamp to match existing style (e.g., /archives/57534/)
+  const id = timestamp.toString().slice(-5)
+  return `/archives/${id}/`
+}
+
 const args = process.argv.slice(2)
 
 if (args.length === 0) {
@@ -42,6 +50,8 @@ if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })
 }
 
+const permalink = generatePermalinkId()
+
 const content = `---
 title: ${args[0]}
 published: ${getDate()}
@@ -49,8 +59,9 @@ description: ''
 image: ''
 tags: []
 category: ''
-draft: false 
+draft: false
 lang: ''
+permalink: ${permalink}
 ---
 `
 
