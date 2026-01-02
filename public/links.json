@@ -107,6 +107,18 @@
           "intro": "Walking on the Time Axis."
         }
       ]
+    },
+    {
+      "name": "组织",
+      "description": "组织&团队",
+      "links": [
+        {
+          "name": "GUETSEC",
+          "link": "https://guetsec.cn/",
+          "avatar": "../links_img/guetsec.png",
+          "intro": "期待一个有梦想的你。"
+        }
+      ]
     }
   ]
 }
