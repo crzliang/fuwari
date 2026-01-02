@@ -1,27 +1,112 @@
 {
   "friends": [
     {
-      "name": "Common Links",
-      "description": "Common friend links",
+      "name": "GUET的师傅们",
+      "description": "那些人，那些事",
       "links": [
         {
-          "name": "Astro",
-          "intro": "The web framework for content-driven websites",
-          "link": "https://astro.build/",
-          "avatar": "https://astro.build/favicon.svg"
+          "name": "潘少",
+          "link": "https://sf2333.github.io/",
+          "avatar": "../links_img/ps.jpeg",
+          "intro": "pwn"
         },
         {
-          "name": "Fuwari",
-          "intro": "A static blog template built with Astro",
-          "link": "https://github.com/saicaca/fuwari",
-          "avatar": "https://github.com/saicaca.png"
+          "name": "小胖",
+          "link": "https://c1everf0x.top/",
+          "avatar": "../links_img/xp.jpeg",
+          "intro": "考研、二进制"
+        },
+        {
+          "name": "小小盒子",
+          "link": "https://caddyetui.top/",
+          "avatar": "../links_img/box.jpeg",
+          "intro": "box、二进制"
+        },
+        {
+          "name": "S神",
+          "link": "https://sapphire037.github.io/",
+          "avatar": "../links_img/sapphire.jpeg",
+          "intro": "web、misc"
+        },
+        {
+          "name": "Sncker",
+          "link": "https://sncker.github.io/",
+          "avatar": "../links_img/sncker.jpeg",
+          "intro": "协会扫地僧"
+        },
+        {
+          "name": "sivona",
+          "link": "https://sivona.top/",
+          "avatar": "../links_img/sivona.jpeg",
+          "intro": "管师傅、二进制"
+        },
+        {
+          "name": "lnjoy",
+          "link": "https://www.cnblogs.com/lnjoy/",
+          "avatar": "../links_img/lnjoy.jpeg",
+          "intro": "李师傅、密码、区块链"
+        },
+        {
+          "name": "树",
+          "link": "https://todis21.github.io/",
+          "avatar": "../links_img/tree.jpeg",
+          "intro": "web、渗透"
+        },
+        {
+          "name": "ta0tie",
+          "link": "https://www.ta0tie.cn/",
+          "avatar": "../links_img/ta0tie.jpeg",
+          "intro": "密码、区块链"
+        },
+        {
+          "name": "ZredamanJ",
+          "link": "https://blog.csdn.net/qq_61237064",
+          "avatar": "../links_img/zr.jpeg",
+          "intro": "七星负责人、web、渗透"
+        },
+        {
+          "name": "PYF",
+          "link": "https://www.cnblogs.com/shadow-fy/",
+          "avatar": "../links_img/20221223204441.png",
+          "intro": "科协游戏开发大哥"
+        },
+        {
+          "name": "Pai",
+          "link": "https://blog.csdn.net/qq_62260856?type=blog",
+          "avatar": "../links_img/pai.jpeg",
+          "intro": "信安小组负责人、web、misc"
+        },
+        {
+          "name": "c2hndmF0",
+          "link": "https://www.cray0n.online/",
+          "avatar": "../links_img/c2hndmF0.jpeg",
+          "intro": "c2hndmF0"
+        },
+        {
+          "name": "文大",
+          "link": "https://blog.csdn.net/m0_63138919?type=blog",
+          "avatar": "../links_img/wd.jpeg",
+          "intro": "徐wl"
         }
       ]
     },
     {
-      "name": "Special Links",
-      "description": "Special friend links",
-      "links": []
+      "name": "大佬",
+      "description": "网上认识的大佬们",
+      "links": [
+        {
+          "name": "张时贰",
+          "link": "https://zhsher.cn",
+          "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1310446718&s=5",
+          "intro": "环转码，爱敲代码的小张！"
+        },
+        {
+          "name": "GZTime",
+          "link": "https://blog.gztime.cc/",
+          "avatar": "https://cdn.gzti.me/avatar/GZTime_2021.png",
+          "intro": "Walking on the Time Axis."
+        }
+      ]
     }
   ]
 }
