@@ -95,3 +95,32 @@ export type BlogPostData = {
 export type ExpressiveCodeConfig = {
 	theme: string;
 };
+
+export type TwikooConfig = {
+	envId: string;
+	region?: string;
+	lang?: string;
+};
+
+export type DisqusConfig = {
+	shortname: string;
+};
+
+export type GiscusConfig = {
+	repo: string;
+	repoId: string;
+	category: string;
+	categoryId: string;
+	mapping?: string;
+	reactionsEnabled?: string;
+	emitMetadata?: string;
+	inputPosition?: "top" | "bottom";
+	lang?: string;
+	loading?: "lazy" | "eager";
+};
+
+export type CommentConfig = {
+	twikoo?: TwikooConfig;
+	disqus?: DisqusConfig;
+	giscus?: GiscusConfig;
+};

@@ -1,0 +1,35 @@
+---
+import { commentConfig } from '@/config'
+
+interface Props {
+  identifier: string
+  url: string
+  title: string
+}
+
+const { identifier, url, title } = Astro.props
+
+const config = {
+  ...commentConfig.disqus,
+  identifier,
+  url,
+  title
+}
+---
+
+<div id="disqus_thread"></div>
+
+<script is:inline define:vars={{ config }}>
+  var disqus_config = function () {
+    this.page.url = config.url
+    this.page.identifier = config.identifier
+    this.page.title = config.title
+  }
+
+  ;(function() {
+    var d = document, s = d.createElement('script')
+    s.src = 'https://' + config.shortname + '.disqus.com/embed.js'
+    s.setAttribute('data-timestamp', +new Date())
+    ;(d.head || d.body).appendChild(s)
+  })()
+</script>

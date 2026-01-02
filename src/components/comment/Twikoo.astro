@@ -1,0 +1,69 @@
+---
+import { commentConfig } from '@/config'
+
+interface Props {
+  path: string
+}
+
+const { path } = Astro.props
+
+const twikooConfig = {
+  envId: commentConfig.twikoo?.envId || '',
+  el: '#tcomment',
+  path: path,
+  lang: commentConfig.twikoo?.lang || 'zh-CN',
+  region: commentConfig.twikoo?.region
+}
+---
+
+<div class="twikoo-container">
+  <h3 class="text-xl font-bold mb-4 text-black/90 dark:text-white/90">评论</h3>
+  <div id="tcomment" class="mt-4"></div>
+</div>
+
+<script is:inline define:vars={{ twikooConfig }}>
+  // 等待 DOM 完全加载
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTwikoo)
+  } else {
+    initTwikoo()
+  }
+
+  async function initTwikoo() {
+    let twikooVersion = '1.6.44' // 默认版本
+
+    // 尝试从后端获取版本号
+    try {
+      const response = await fetch(twikooConfig.envId)
+      const data = await response.json()
+      if (data.version) {
+        twikooVersion = data.version
+        console.log('Twikoo backend version:', twikooVersion)
+      }
+    } catch (error) {
+      console.warn('Failed to fetch Twikoo version, using default:', twikooVersion)
+    }
+
+    // 动态加载 Twikoo 脚本
+    const script = document.createElement('script')
+    script.src = `https://cdn.jsdelivr.net/npm/twikoo@${twikooVersion}/dist/twikoo.all.min.js`
+    script.async = true
+
+    script.onload = () => {
+      if (typeof twikoo !== 'undefined') {
+        try {
+          twikoo.init(twikooConfig)
+          console.log('Twikoo initialized successfully with version:', twikooVersion)
+        } catch (error) {
+          console.error('Twikoo initialization failed:', error)
+        }
+      }
+    }
+
+    script.onerror = () => {
+      console.error('Failed to load Twikoo script')
+    }
+
+    document.head.appendChild(script)
+  }
+</script>

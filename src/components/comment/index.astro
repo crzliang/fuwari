@@ -1,0 +1,47 @@
+---
+import { commentConfig } from '@/config'
+import { siteConfig } from '@/config'
+import Twikoo from './Twikoo.astro'
+import Disqus from './Disqus.astro'
+import Giscus from './Giscus.astro'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  post: CollectionEntry<'posts'>
+  permalink?: string
+}
+
+const { post, permalink } = Astro.props
+const { id, data, slug } = post
+const postUrl = `${siteConfig.title}${slug}`
+
+// 使用 permalink 或回退到 slug
+const commentPath = permalink || `/${slug}`
+
+// 检测使用哪个评论系统（优先级：Disqus > Giscus > Twikoo）
+const hasDisqus = commentConfig.disqus?.shortname
+const hasGiscus = commentConfig.giscus?.repo
+const hasTwikoo = commentConfig.twikoo?.envId
+---
+
+{hasDisqus && (
+  <Disqus
+    identifier={id}
+    url={postUrl}
+    title={data.title}
+  />
+)}
+
+{!hasDisqus && hasGiscus && (
+  <Giscus />
+)}
+
+{!hasDisqus && !hasGiscus && hasTwikoo && (
+  <Twikoo path={commentPath} />
+)}
+
+{!hasDisqus && !hasGiscus && !hasTwikoo && (
+  <div class="text-center text-gray-500 py-8">
+    评论系统未配置，请在 config.ts 中配置 Twikoo、Disqus 或 Giscus
+  </div>
+)}

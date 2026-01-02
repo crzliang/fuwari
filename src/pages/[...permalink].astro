@@ -13,6 +13,7 @@ import ImageWrapper from "@components/misc/ImageWrapper.astro";
 import PostMetadata from "@components/PostMeta.astro";
 import { profileConfig, siteConfig } from "src/config";
 import { formatDateToYYYYMMDD } from "@utils/date-utils";
+import Comment from "@components/comment/index.astro";
 
 export async function getStaticPaths() {
 	const blogEntries = await getSortedPosts();
@@ -47,6 +48,16 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await entry.render();
 const { remarkPluginFrontmatter } = await entry.render();
+
+// 生成当前页面的 permalink
+const permalinkData: PermalinkData = {
+	slug: entry.slug,
+	title: entry.data.title,
+	published: entry.data.published,
+	category: entry.data.category,
+	permalink: entry.data.permalink,
+};
+const currentPermalink = generatePermalink(permalinkData);
 
 const jsonLd = {
 	"@context": "https://schema.org",
@@ -132,6 +143,13 @@ const jsonLd = {
             </Markdown>
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
+        </div>
+    </div>
+
+    <!-- 评论组件 -->
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
+        <div class="card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full onload-animation">
+            <Comment post={entry} permalink={currentPermalink} />
         </div>
     </div>
 

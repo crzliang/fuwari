@@ -4,6 +4,7 @@ import type {
 	NavBarConfig,
 	ProfileConfig,
 	SiteConfig,
+	CommentConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
@@ -97,4 +98,34 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
 	// Please select a dark theme, as this blog theme currently only supports dark background color
 	theme: "github-dark",
+};
+
+export const commentConfig: CommentConfig = {
+	// 选择一个评论系统启用，优先级：disqus > giscus > twikoo
+
+	// Twikoo 评论系统
+	// 访问 https://twikoo.js.org/ 了解如何配置
+	twikoo: {
+		envId: "https://twikoo-alphas-projects-f8e4d303.vercel.app", // 你的 Twikoo 环境 ID 或部署地址
+	},
+
+	// Disqus 评论系统
+	// disqus: {
+	// 	shortname: "your-disqus-shortname",
+	// },
+
+	// Giscus 评论系统 (基于 GitHub Discussions)
+	// 访问 https://giscus.app/zh-CN 获取配置
+	// giscus: {
+	// 	repo: "your-username/your-repo",
+	// 	repoId: "your-repo-id",
+	// 	category: "General",
+	// 	categoryId: "your-category-id",
+	// 	mapping: "pathname",
+	// 	reactionsEnabled: "1",
+	// 	emitMetadata: "0",
+	// 	inputPosition: "bottom",
+	// 	lang: "zh-CN",
+	// 	loading: "lazy",
+	// },
 };

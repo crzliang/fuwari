@@ -1,0 +1,26 @@
+---
+import { commentConfig } from '@/config'
+
+const config = commentConfig.giscus
+---
+
+{config && (
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo={config.repo}
+    data-repo-id={config.repoId}
+    data-category={config.category}
+    data-category-id={config.categoryId}
+    data-mapping={config.mapping || 'pathname'}
+    data-strict="0"
+    data-reactions-enabled={config.reactionsEnabled || '1'}
+    data-emit-metadata={config.emitMetadata || '0'}
+    data-input-position={config.inputPosition || 'bottom'}
+    data-theme="preferred_color_scheme"
+    data-lang={config.lang || 'zh-CN'}
+    data-loading={config.loading || 'lazy'}
+    crossorigin="anonymous"
+    async
+  ></script>
+)}
