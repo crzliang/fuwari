@@ -39,7 +39,6 @@ const twikooConfig = {
       const data = await response.json()
       if (data.version) {
         twikooVersion = data.version
-        console.log('Twikoo backend version:', twikooVersion)
       }
     } catch (error) {
       console.warn('Failed to fetch Twikoo version, using default:', twikooVersion)
@@ -54,7 +53,6 @@ const twikooConfig = {
       if (typeof twikoo !== 'undefined') {
         try {
           twikoo.init(twikooConfig)
-          console.log('Twikoo initialized successfully with version:', twikooVersion)
         } catch (error) {
           console.error('Twikoo initialization failed:', error)
         }
