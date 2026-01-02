@@ -48,7 +48,7 @@ export const zh_CN: Translation = {
 	[Key.siteAvatar]: "头像",
 	[Key.applyDesc]: "可通过下方留言申请友链。申请要求：",
 	[Key.applyRule1]: "推荐了本站",
-	[Key.applyRule2]: "站点活着且有正式域名",
+	[Key.applyRule2]: "站点活着且有正式域名（github.io也可以）",
 	[Key.applyRule3]: "至少五篇原创文章且最近一年更新过",
 	[Key.applyRule4]: "内容不违反国家法律",
 };

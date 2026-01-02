@@ -38,9 +38,14 @@ const applyTip = linksConfig.applyTip;
 
 			{friendGroups.map((group) => (
 				<div class="mb-8">
-					<h2 class="text-2xl font-bold mb-4" id={group.name.toLowerCase().replace(/\s+/g, '-')}>
+					<h2 class="text-2xl font-bold mb-2" id={group.name.toLowerCase().replace(/\s+/g, '-')}>
 						{group.name}
 					</h2>
+					{group.description && (
+						<p class="text-black/60 dark:text-white/60 mb-4 text-sm italic">
+							{group.description}
+						</p>
+					)}
 
 					{group.links.length > 0 ? (
 						<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
