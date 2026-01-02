@@ -142,7 +142,7 @@ export const linksConfig: LinksConfig = {
 	applyTip: {
 		name: "crzliang",
 		intro: "crzliang's Blog",
-		link: "https://blog.crzliang.cn/",
-		avatar: "https://blog.crzliang.cn/favicon.ico",
+		link: "https://blog.crzliang.cn",
+		avatar: "https://blog.crzliang.cn/img/avatar.jpg",
 	},
 };
