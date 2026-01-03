@@ -113,7 +113,7 @@ export const commentConfig: CommentConfig = {
 	// Twikoo 评论系统
 	// 访问 https://twikoo.js.org/ 了解如何配置
 	twikoo: {
-		envId: "https://twikoo-alphas-projects-f8e4d303.vercel.app", // 你的 Twikoo 环境 ID 或部署地址
+		envId: "https://twikoo.crzliang.cn/", // 你的 Twikoo 环境 ID 或部署地址
 	},
 
 	// Disqus 评论系统
