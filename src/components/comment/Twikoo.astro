@@ -23,46 +23,40 @@ const twikooConfig = {
 </div>
 
 <script is:inline define:vars={{ twikooConfig }}>
-  // 等待 DOM 完全加载
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTwikoo)
-  } else {
-    initTwikoo()
-  }
-
-  async function initTwikoo() {
-    let twikooVersion = '1.6.44' // 默认版本
-
-    // 尝试从后端获取版本号
-    try {
-      const response = await fetch(twikooConfig.envId)
-      const data = await response.json()
-      if (data.version) {
-        twikooVersion = data.version
-      }
-    } catch (error) {
-      console.warn('Failed to fetch Twikoo version, using default:', twikooVersion)
-    }
-
-    // 动态加载 Twikoo 脚本
-    const script = document.createElement('script')
-    script.src = `https://cdnjs.crzliang.cn/ajax/libs/twikoo/${twikooVersion}/twikoo.all.min.js`
-    script.async = true
+  const initTwikoo = () => {
+    const twikooVersion = '1.6.44'; // 使用一个固定的版本，避免网络请求
+    const script = document.createElement('script');
+    script.src = `https://cdnjs.crzliang.cn/ajax/libs/twikoo/${twikooVersion}/twikoo.all.min.js`;
+    script.async = true;
 
     script.onload = () => {
       if (typeof twikoo !== 'undefined') {
         try {
-          twikoo.init(twikooConfig)
+          twikoo.init(twikooConfig);
         } catch (error) {
-          console.error('Twikoo initialization failed:', error)
+          console.error('Twikoo initialization failed:', error);
         }
       }
-    }
+    };
 
     script.onerror = () => {
-      console.error('Failed to load Twikoo script')
-    }
+      console.error('Failed to load Twikoo script');
+    };
 
-    document.head.appendChild(script)
-  }
+    document.head.appendChild(script);
+  };
+
+  const tcomment = document.getElementById('tcomment');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        initTwikoo();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px 0px 200px 0px' // 在视口下方200px时开始加载
+  });
+
+  observer.observe(tcomment);
 </script>
