@@ -27,4 +27,4 @@ bun.lockb
 yarn.lock
 
 # obsdian
-src/content/posts/.obsidian
+# src/content/posts/.obsidian
