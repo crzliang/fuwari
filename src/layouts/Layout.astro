@@ -1,7 +1,4 @@
 ---
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
 import "overlayscrollbars/overlayscrollbars.css";
 import "photoswipe/style.css";
 
@@ -168,6 +165,17 @@ const bannerOffset =
 	'banner-height-home': `${BANNER_HEIGHT_HOME}vh`,
 	'banner-height': `${BANNER_HEIGHT}vh`,
 }}>
+@font-face {
+	font-family: "JetBrains Mono Custom";
+	src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+	font-display: swap;
+}
+
+html,
+body {
+	font-family: "JetBrains Mono Custom", monospace;
+}
+
 @tailwind components;
 @layer components {
 	.enable-banner.is-home #banner-wrapper {
