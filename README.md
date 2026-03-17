@@ -1,61 +1,38 @@
 # 🍥Fuwari
 
-基于 [Astro](https://astro.build) 开发的静态博客模板。
+这是一个基于 [Astro](https://astro.build) 构建的个人博客项目，原模板作者为 [saicaca](https://github.com/saicaca)，本仓库在其作品基础上进行了简化调整与个性化改造，更偏向个人使用场景。
 
-[**🖥️在线预览（Vercel）**](https://fuwari.vercel.app)
+和原作者默认演示站相比，这个版本做了一些差异化处理，例如：
 
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+- 更偏向个人博客展示，而不是模板演示
+- 调整了部分页面视觉风格与字体配置
+- 增加了自定义 Permalinks（永久链接）能力
+- 集成了评论系统等更符合个人站点使用习惯的配置
 
 ## ✨ 功能特性
 
-- [x] 基于 Astro 和 Tailwind CSS 开发
-- [x] 流畅的动画和页面过渡
-- [x] 亮色 / 暗色模式
-- [x] 自定义主题色和横幅图片
-- [x] 响应式设计
-- [ ] 评论
-- [x] 搜索
-- [x] 文内目录
-- [x] 自定义 Permalinks（永久链接）(这个功能是原版本中没有的，是我用AI编写添加的)
+- [x] 基于 Astro 与 Tailwind CSS 构建，适合静态博客部署
+- [x] 响应式布局，兼容桌面端与移动端浏览
+- [x] 支持亮色 / 暗色模式切换
+- [x] 支持主题色、横幅、头像与基础站点信息自定义
+- [x] 支持文章搜索与目录导航
+- [x] 支持自定义 Permalinks（永久链接）结构
+- [x] 支持 Giscus 评论系统接入
+- [x] 支持个性化字体配置与界面风格调整
+- [x] 适合作为个人博客而非纯模板演示站点使用
 
 ## 👀 要求
 
 - Node.js <= 22
 - pnpm <= 9
 
-## 🚀 使用方法 1
+## 🚀 使用方法
 
-使用 [create-fuwari](https://github.com/L4Ph/create-fuwari) 在本地初始化项目。
+本项目的基础使用方式可直接参考原作者仓库 [`saicaca/fuwari`](README.md:1) 的说明：
 
-```sh
-# npm
-npm create fuwari@latest
-
-# yarn
-yarn create fuwari
-
-# pnpm
-pnpm create fuwari@latest
-
-# bun
-bun create fuwari@latest
-
-# deno
-deno run -A npm:create-fuwari@latest
-```
-
-1. 通过配置文件 `src/config.ts` 自定义博客
-2. 执行 `pnpm new-post <filename>` 创建新文章，并在 `src/content/posts/` 目录中编辑
-3. 参考[官方指南](https://docs.astro.build/zh-cn/guides/deploy/)将博客部署至 Vercel, Netlify, GitHub Pages 等；部署前需编辑 `astro.config.mjs` 中的站点设置。
-
-## 🚀 使用方法 2
-
-1. 使用此模板[生成新仓库](https://github.com/saicaca/fuwari/generate)或 Fork 此仓库
-2. 进行本地开发，Clone 新的仓库，执行 `pnpm install` 和 `pnpm add sharp` 以安装依赖  
-   - 若未安装 [pnpm](https://pnpm.io)，执行 `npm install -g pnpm`
-3. 通过配置文件 `src/config.ts` 自定义博客
-4. 执行 `pnpm new-post <filename>` 创建新文章，并在 `src/content/posts/` 目录中编辑
-5. 参考[官方指南](https://docs.astro.build/zh-cn/guides/deploy/)将博客部署至 Vercel, Netlify, GitHub Pages 等；部署前需编辑 `astro.config.mjs` 中的站点设置。
+- 原项目仓库：https://github.com/saicaca/fuwari
+- 初始化与部署方式建议优先参考原仓库文档
+- 当前仓库主要记录我基于原模板做的个性化修改
 
 ## ⚙️ 文章 Frontmatter
 
