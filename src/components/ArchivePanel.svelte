@@ -6,8 +6,8 @@ import { i18n } from "../i18n/translation";
 import { getPostUrl } from "../utils/url-utils";
 import { type PermalinkData } from "../utils/permalink-utils";
 
-export let tags: string[];
-export let categories: string[];
+export let tags: string[] = [];
+export let categories: string[] = [];
 export let sortedPosts: Post[] = [];
 
 const params = new URLSearchParams(window.location.search);
@@ -20,7 +20,7 @@ interface Post {
 	data: {
 		title: string;
 		tags: string[];
-		category?: string;
+		category?: string | null;
 		published: Date;
 		permalink?: string;
 	};
