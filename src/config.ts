@@ -117,9 +117,9 @@ export const commentConfig: CommentConfig = {
 
 	// Twikoo 评论系统
 	// 访问 https://twikoo.js.org/ 了解如何配置
-	twikoo: {
-		envId: "https://twikoo.crzliang.cn/", // 你的 Twikoo 环境 ID 或部署地址
-	},
+	// twikoo: {
+	// 	envId: "https://twikoo.crzliang.cn/", // 你的 Twikoo 环境 ID 或部署地址
+	// },
 
 	// Disqus 评论系统
 	// disqus: {
@@ -128,18 +128,18 @@ export const commentConfig: CommentConfig = {
 
 	// Giscus 评论系统 (基于 GitHub Discussions)
 	// 访问 https://giscus.app/zh-CN 获取配置
-	// giscus: {
-	// 	repo: "your-username/your-repo",
-	// 	repoId: "your-repo-id",
-	// 	category: "General",
-	// 	categoryId: "your-category-id",
-	// 	mapping: "pathname",
-	// 	reactionsEnabled: "1",
-	// 	emitMetadata: "0",
-	// 	inputPosition: "bottom",
-	// 	lang: "zh-CN",
-	// 	loading: "lazy",
-	// },
+	giscus: {
+		repo: "crzliang/blog-comments",
+		repoId: "R_kgDONMQSyg",
+		category: "Announcements",
+		categoryId: "DIC_kwDONMQSys4CpXsQ",
+		mapping: "pathname",
+		reactionsEnabled: "1",
+		emitMetadata: "0",
+		inputPosition: "bottom",
+		lang: "zh-CN",
+		loading: "lazy",
+	},
 };
 
 export const linksConfig: LinksConfig = {
