@@ -7,6 +7,7 @@ export const es: Translation = {
 	[Key.archive]: "Archivo",
 	[Key.search]: "Buscar",
 	[Key.links]: "Enlaces",
+	[Key.movies]: "Películas",
 
 	[Key.tags]: "Etiquetas",
 	[Key.categories]: "Categorías",

@@ -1,0 +1,113 @@
+---
+import { getCollection } from "astro:content";
+import MovieCard from "@components/MovieCard.astro";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+
+const movies = await getCollection("movies", ({ data }) => {
+	return import.meta.env.PROD ? data.draft !== true : true;
+});
+
+const sortedMovies = movies.sort((a, b) => {
+	const dateDiff =
+		new Date(b.data.watchedDate).getTime() -
+		new Date(a.data.watchedDate).getTime();
+	if (dateDiff !== 0) return dateDiff;
+
+	return b.data.rating - a.data.rating;
+});
+
+const totalMovies = sortedMovies.length;
+const averageRating =
+	totalMovies > 0
+		? (
+				sortedMovies.reduce((sum, movie) => sum + movie.data.rating, 0) /
+				totalMovies
+			).toFixed(1)
+		: "0.0";
+
+const latestWatched = sortedMovies[0]?.data.watchedDate;
+const latestWatchedText = latestWatched
+	? latestWatched.toLocaleDateString("zh-CN", {
+			year: "numeric",
+			month: "2-digit",
+			day: "2-digit",
+		})
+	: "暂无记录";
+
+const movieGroups = Object.entries(
+	sortedMovies.reduce<Record<string, typeof sortedMovies>>((groups, movie) => {
+		const watchedYear = String(new Date(movie.data.watchedDate).getFullYear());
+		if (!groups[watchedYear]) {
+			groups[watchedYear] = [];
+		}
+		groups[watchedYear].push(movie);
+		return groups;
+	}, {}),
+).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
+---
+
+<MainGridLayout title={i18n(I18nKey.movies)} description="个人观影记录与手动维护的电影收藏页。">
+	<div class="space-y-4">
+		<section class="card-base rounded-[var(--radius-large)] px-6 md:px-9 py-7">
+			<div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+				<div class="max-w-2xl">
+					<p class="text-sm uppercase tracking-[0.3em] text-[var(--primary)] mb-3">Movies</p>
+					<h1 class="text-3xl md:text-4xl font-bold mb-4">我的观影档案</h1>
+					<p class="text-black/70 dark:text-white/70 leading-8">
+						这里记录我看过的电影、纪录片等内容。
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:min-w-[22rem]">
+					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
+						<div class="text-xs text-black/45 dark:text-white/45 mb-1">影片总数</div>
+						<div class="text-2xl font-bold">{totalMovies}</div>
+					</div>
+					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
+						<div class="text-xs text-black/45 dark:text-white/45 mb-1">平均评分</div>
+						<div class="text-2xl font-bold">{averageRating}</div>
+					</div>
+					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
+						<div class="text-xs text-black/45 dark:text-white/45 mb-1">最近观看</div>
+						<div class="text-sm font-semibold leading-6">{latestWatchedText}</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{totalMovies > 0 ? (
+			<section class="space-y-8">
+				{movieGroups.map(([watchedYear, items]) => (
+					<div class="relative pl-6 md:pl-8">
+						<div class="absolute left-2 top-0 bottom-0 w-px bg-black/10 dark:bg-white/10"></div>
+						<div class="absolute left-0 top-3 h-4 w-4 rounded-full border-4 border-[var(--page-bg)] bg-[var(--primary)]"></div>
+
+						<div class="mb-4 flex items-center justify-between gap-4">
+							<div>
+								<h2 class="text-2xl font-bold">{watchedYear}</h2>
+								<p class="text-sm text-black/55 dark:text-white/55">
+									共 {items.length} 部
+								</p>
+							</div>
+						</div>
+
+						<div class="grid grid-cols-1 gap-4">
+							{items.map((movie) => (
+								<MovieCard movie={movie} />
+							))}
+						</div>
+					</div>
+				))}
+			</section>
+		) : (
+			<section class="card-base rounded-[var(--radius-large)] px-6 md:px-9 py-12 text-center">
+				<h2 class="text-2xl font-bold mb-3">还没有电影记录</h2>
+				<p class="text-black/65 dark:text-white/65 leading-7">
+					可以先在 <code>src/content/movies</code> 下新增几部电影内容文件，再回来看这个页面。
+				</p>
+			</section>
+		)}
+	</div>
+</MainGridLayout>
