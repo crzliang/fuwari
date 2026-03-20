@@ -38,7 +38,12 @@ const moviesCollection = defineCollection({
 	}),
 });
 
+const specCollection = defineCollection({
+	schema: z.object({}).passthrough(),
+});
+
 export const collections = {
 	posts: postsCollection,
 	movies: moviesCollection,
+	spec: specCollection,
 };

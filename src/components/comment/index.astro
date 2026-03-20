@@ -1,6 +1,5 @@
 ---
 import { commentConfig } from '@/config'
-import { siteConfig } from '@/config'
 import Twikoo from './Twikoo.astro'
 import Giscus from './Giscus.astro'
 import type { CollectionEntry } from 'astro:content'
@@ -11,8 +10,7 @@ interface Props {
 }
 
 const { post, permalink } = Astro.props
-const { id, data, slug } = post
-const postUrl = `${siteConfig.title}${slug}`
+const { slug } = post
 
 // 使用 permalink 或回退到 slug
 const commentPath = permalink || `/${slug}`
