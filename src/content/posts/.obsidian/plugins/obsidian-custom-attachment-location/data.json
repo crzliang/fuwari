@@ -1,6 +1,6 @@
 {
   "attachmentFolderPath": "./images/${noteFileName}",
-  "attachmentRenameMode": "Only pasted images",
+  "attachmentRenameMode": "All",
   "collectAttachmentUsedByMultipleNotesMode": "Skip",
   "collectedAttachmentFileName": "",
   "convertImagesToJpegMode": "None",
@@ -14,7 +14,7 @@
   "generatedAttachmentFileName": "img-${date:{momentJsFormat:'YYYYMMDDHHmmssSSS'}}",
   "includePaths": [],
   "jpegQuality": 0.8,
-  "markdownUrlFormat": "",
+  "markdownUrlFormat": "relative",
   "moveAttachmentToProperFolderUsedByMultipleNotesMode": "CopyAll",
   "renamedAttachmentFileName": "",
   "shouldDeleteOrphanAttachments": false,
