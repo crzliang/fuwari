@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "08d7de1f4c1307e8",
+        "id": "aaeaf5bcee1a5d26",
         "type": "tabs",
         "children": [
           {
-            "id": "a03a17a3321069c2",
+            "id": "6daf1f7c3034ae6c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "archives/vibe coding一个Windows音频控制器.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "vibe coding一个Windows音频控制器"
+              "title": "新标签页"
             }
           }
         ]
@@ -183,17 +179,27 @@
       "bases:新建数据库": false
     }
   },
-  "active": "a03a17a3321069c2",
+  "active": "6daf1f7c3034ae6c",
   "lastOpenFiles": [
+    "archives/测试.md",
+    "archives/测试",
+    "archives/测试/IMG-20260323233740557.png",
+    "测试.md",
+    "archives/测试/IMG-20260323233446650.png",
+    "archives/测试/IMG-20260323233255595.png",
+    "Pasted image 20260323233243.png",
+    "archives/images/测试/img-20260323233228639.png",
+    "archives/images/测试",
+    "未命名 1.base",
+    "未命名.base",
+    "archives/vibe coding一个Windows音频控制器.md",
     "archives/images/vibe_coding一个Windows音频控制器/img-20260323230135733.png",
     "archives/images/vibe_coding一个Windows音频控制器/img-20260323230106903.png",
     "archives/images/vibe_coding一个Windows音频控制器",
     "archives/新的个人主页.md",
-    "archives/vibe coding一个Windows音频控制器.md",
     "archives/images/vibe coding一个Windows音频控制器/img-20260323230135733.png",
     "archives/images/vibe coding一个Windows音频控制器/img-20260323230106903.png",
     "archives/images/vibe coding一个Windows音频控制器/img-20260323225800172.png",
-    "archives/images/vibe coding一个Windows音频控制器/img-20260323230036492.png",
     "archives/Git命令笔记.md",
     "archives/wsl2修改安装路径.md",
     "relative.md",
@@ -201,10 +207,6 @@
     "archives/利用GitHub Actions部署Docusaurus到服务器.md",
     "archives/使用vercel部署wowchemy学术网站.md",
     "--.md",
-    "archives/images/新的个人主页/img-20260322013918182.png",
-    "archives/images/新的个人主页/img-20260322013633271.png",
-    "archives/images/新的个人主页/img-20260322012707542.png",
-    "archives/images/新的个人主页/homepage-3cplpm92k9.edgeone.run_.png",
     "archives/images/新的个人主页",
     "archives/2025年度总结.md",
     "archives/给主机加无线网卡.md",
