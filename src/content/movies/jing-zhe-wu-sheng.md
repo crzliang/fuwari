@@ -11,7 +11,5 @@ genres:
 country: 中国大陆
 director: 张艺谋
 status: watched
-tags:
-  - 悬疑
 draft: false
 ---

@@ -11,7 +11,5 @@ genres:
 country: 中国大陆
 director: 韩寒
 status: watched
-tags:
-  - 赛车
 draft: false
 ---
