@@ -10,6 +10,10 @@ const movies = await getCollection("movies", ({ data }) => {
 });
 
 const sortedMovies = movies.sort((a, b) => {
+	if (!a.data.watchedDate && !b.data.watchedDate) return b.data.rating - a.data.rating;
+	if (!a.data.watchedDate) return 1;
+	if (!b.data.watchedDate) return -1;
+
 	const dateDiff =
 		new Date(b.data.watchedDate).getTime() -
 		new Date(a.data.watchedDate).getTime();
@@ -27,7 +31,9 @@ const averageRating =
 			).toFixed(1)
 		: "0.0";
 
-const latestWatched = sortedMovies[0]?.data.watchedDate;
+const noDateCount = sortedMovies.filter((m) => !m.data.watchedDate).length;
+
+const latestWatched = sortedMovies.find((m) => m.data.watchedDate)?.data.watchedDate;
 const latestWatchedText = latestWatched
 	? latestWatched.toLocaleDateString("zh-CN", {
 			year: "numeric",
@@ -36,16 +42,31 @@ const latestWatchedText = latestWatched
 		})
 	: "暂无记录";
 
-const movieGroups = Object.entries(
-	sortedMovies.reduce<Record<string, typeof sortedMovies>>((groups, movie) => {
-		const watchedYear = String(new Date(movie.data.watchedDate).getFullYear());
-		if (!groups[watchedYear]) {
-			groups[watchedYear] = [];
+const movieGroups = (() => {
+	const result = sortedMovies.reduce<Record<string, typeof sortedMovies>>((groups, movie) => {
+		const key = movie.data.watchedDate
+			? String(new Date(movie.data.watchedDate).getFullYear())
+			: "__no_date__";
+		if (!groups[key]) {
+			groups[key] = [];
 		}
-		groups[watchedYear].push(movie);
+		groups[key].push(movie);
 		return groups;
-	}, {}),
-).sort(([yearA], [yearB]) => Number(yearB) - Number(yearA));
+	}, {});
+
+	const noDateGroup = result["__no_date__"];
+	delete result["__no_date__"];
+
+	const sorted = Object.entries(result).sort(
+		([yearA], [yearB]) => Number(yearB) - Number(yearA),
+	);
+
+	if (noDateGroup) {
+		sorted.push(["忘记具体观看日期", noDateGroup]);
+	}
+
+	return sorted;
+})();
 ---
 
 <MainGridLayout title={i18n(I18nKey.movies)} description="个人观影记录与手动维护的电影收藏页。">
@@ -60,7 +81,7 @@ const movieGroups = Object.entries(
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:min-w-[22rem]">
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:min-w-[22rem]">
 					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
 						<div class="text-xs text-black/45 dark:text-white/45 mb-1">影片总数</div>
 						<div class="text-2xl font-bold">{totalMovies}</div>
@@ -72,6 +93,10 @@ const movieGroups = Object.entries(
 					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
 						<div class="text-xs text-black/45 dark:text-white/45 mb-1">最近观看</div>
 						<div class="text-sm font-semibold leading-6">{latestWatchedText}</div>
+					</div>
+					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
+						<div class="text-xs text-black/45 dark:text-white/45 mb-1">忘记具体日期</div>
+						<div class="text-2xl font-bold">{noDateCount}</div>
 					</div>
 				</div>
 			</div>

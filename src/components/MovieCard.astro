@@ -6,7 +6,7 @@ interface MovieData {
 	title: string;
 	originalTitle?: string;
 	year: number;
-	watchedDate: Date;
+	watchedDate?: Date;
 	rating: number;
 	poster?: string;
 	genres?: string[];
@@ -37,11 +37,13 @@ const {
 	tags = [],
 } = movie.data;
 
-const watchedDateText = watchedDate.toLocaleDateString("zh-CN", {
-	year: "numeric",
-	month: "2-digit",
-	day: "2-digit",
-});
+const watchedDateText = watchedDate
+	? watchedDate.toLocaleDateString("zh-CN", {
+			year: "numeric",
+			month: "2-digit",
+			day: "2-digit",
+		})
+	: "忘记具体观看日期";
 
 const ratingText = Number.isInteger(rating) ? `${rating}.0` : rating.toFixed(1);
 
@@ -88,7 +90,11 @@ const metaItems = [country, director].filter((item): item is string => Boolean(i
 
 			<div class="flex flex-wrap gap-2 text-sm text-black/65 dark:text-white/65">
 				<span class="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1">{year}</span>
-				<span class="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1">观看于 {watchedDateText}</span>
+				{watchedDate ? (
+					<span class="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1">观看于 {watchedDateText}</span>
+				) : (
+					<span class="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1">忘记具体观看日期</span>
+				)}
 				{metaItems.map((item) => (
 					<span class="rounded-full bg-black/5 dark:bg-white/10 px-3 py-1">{item}</span>
 				))}
