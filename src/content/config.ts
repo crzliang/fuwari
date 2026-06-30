@@ -28,6 +28,7 @@ const moviesCollection = defineCollection({
 		year: z.number().int(),
 		watchedDate: z.date().optional(),
 		rating: z.number().min(0).max(10),
+		ratingSource: z.string().optional().default("豆瓣"),
 		poster: z.string().optional().default(""),
 		genres: z.array(z.string()).optional().default([]),
 		country: z.string().optional().default(""),

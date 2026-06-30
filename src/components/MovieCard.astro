@@ -8,6 +8,7 @@ interface MovieData {
 	year: number;
 	watchedDate?: Date;
 	rating: number;
+	ratingSource?: string;
 	poster?: string;
 	genres?: string[];
 	country?: string;
@@ -29,6 +30,7 @@ const {
 	year,
 	watchedDate,
 	rating,
+	ratingSource = "豆瓣",
 	poster,
 	genres = [],
 	country,
@@ -83,7 +85,7 @@ const metaItems = [country, director].filter((item): item is string => Boolean(i
 					)}
 				</div>
 				<div class="shrink-0 text-right">
-					<div class="text-xs uppercase tracking-[0.2em] text-black/40 dark:text-white/40">豆瓣评分</div>
+					<div class="text-xs uppercase tracking-[0.2em] text-black/40 dark:text-white/40">{ratingSource}评分</div>
 					<div class="text-2xl font-bold text-[var(--primary)]">{ratingText}</div>
 				</div>
 			</div>
