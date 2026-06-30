@@ -4,6 +4,7 @@ originalTitle: Fei Chi Ren Sheng 3
 year: 2026
 watchedDate: 2026-02-28
 rating: 7.2
+ratingSource: 豆瓣
 poster: "images/Fei_Chi_Ren_Sheng_3.jpg"
 genres:
   - 喜剧

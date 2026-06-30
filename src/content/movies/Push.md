@@ -1,10 +1,10 @@
-
 ---
 title: 异能
 originalTitle: Push
 year: 2009
 watchedDate: 2026-06-29
-rating: 6.0
+rating: 6.1
+ratingSource: IMDb
 poster: "images/zimg1rg1hbkb1tqz.webp"
 genres:
   - 科幻

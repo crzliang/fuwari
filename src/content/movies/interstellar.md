@@ -3,6 +3,7 @@ title: 星际穿越
 originalTitle: Interstellar
 year: 2014
 rating: 9.4
+ratingSource: 豆瓣
 poster: "images/Interstellar.jpg"
 genres:
   - 科幻

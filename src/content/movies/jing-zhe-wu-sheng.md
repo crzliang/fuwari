@@ -4,6 +4,7 @@ originalTitle: Jing Zhe Wu Sheng
 year: 2026
 watchedDate: 2026-03-02
 rating: 6.0
+ratingSource: 豆瓣
 poster: "images/Jing_Zhe_Wu_Sheng.jpg"
 genres:
   - 剧情

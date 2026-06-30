@@ -4,6 +4,7 @@ originalTitle: Cold War 1994
 year: 2026
 watchedDate: 2026-05-03
 rating: 7.1
+ratingSource: 豆瓣
 poster: "images/Cold_War_1994.jpg"
 genres:
   - 剧情
