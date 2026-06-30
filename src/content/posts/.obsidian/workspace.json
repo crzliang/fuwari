@@ -11,10 +11,14 @@
             "id": "6daf1f7c3034ae6c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "渗透测试/知攻善防实验室-应急响应靶机.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "知攻善防实验室-应急响应靶机"
             }
           }
         ]
