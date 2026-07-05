@@ -81,7 +81,7 @@ const movieGroups = (() => {
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:min-w-[22rem]">
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 md:min-w-[22rem]">
 					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
 						<div class="text-xs text-black/45 dark:text-white/45 mb-1">影片总数</div>
 						<div class="text-2xl font-bold">{totalMovies}</div>
@@ -89,6 +89,11 @@ const movieGroups = (() => {
 					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
 						<div class="text-xs text-black/45 dark:text-white/45 mb-1">平均评分</div>
 						<div class="text-2xl font-bold">{averageRating}</div>
+					</div>
+					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
+						<div class="text-xs text-black/45 dark:text-white/45 mb-1">浏览量</div>
+						<div class="text-2xl font-bold" id="busuanzi_value_page_pv">-</div>
+						<span class="hidden" id="busuanzi_container_page_pv"></span>
 					</div>
 					<div class="rounded-2xl bg-[var(--btn-regular-bg)] px-4 py-4">
 						<div class="text-xs text-black/45 dark:text-white/45 mb-1">最近观看</div>
